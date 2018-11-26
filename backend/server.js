@@ -77,8 +77,8 @@ router.delete("/deleteData", (req, res) => {
     });
 });
 
-var port = process.env.port || 3001;
-app.listen(port);
-
 // append api for our http requests
 app.use("/api", router);
+
+// launch our backend into a port
+app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
